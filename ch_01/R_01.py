@@ -47,5 +47,23 @@ def sum_squares(n: int) -> int:
 # R-1.5 Give a single command that computes the sum from Exercise R-1.4, relying 
 # on Python’s comprehension syntax and the built-in sum function.
 
-def sum_squares(n: int) -> int:
+def sum_squares2(n: int) -> int:
     return sum([x**2 for x in range(n)])
+
+
+# R-1.6 Write a short Python function that takes a positive integer n and returns
+# the sum of the squares of all the odd positive integers smaller than n.
+
+def sum_square_odd(n: int) -> int:
+    s = 0
+    for x in range(n):
+        if x % 2:
+            s += x**2
+    return s
+
+
+# R-1.7 Give a single command that computes the sum from Exercise R-1.6, rely-
+# ing on Python’s comprehension syntax and the built-in sum function.
+
+def sum_square_odd2(n: int) -> int:
+    return sum([x**2 for x in range(n) if x % 2])
