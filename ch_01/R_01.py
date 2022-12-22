@@ -32,3 +32,20 @@ def minmax(data: List[int]) -> Tuple[int, int]:
             max_val = x
 
     return (min_val, max_val)
+
+
+# R-1.4 Write a short Python function that takes a positive integer n and returns
+# the sum of the squares of all the positive integers smaller than n.
+
+def sum_squares(n: int) -> int:
+    s = 0
+    for x in range(n):
+        s += x**2
+    return s
+
+
+# R-1.5 Give a single command that computes the sum from Exercise R-1.4, relying 
+# on Python’s comprehension syntax and the built-in sum function.
+
+def sum_squares(n: int) -> int:
+    return sum([x**2 for x in range(n)])
