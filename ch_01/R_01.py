@@ -97,3 +97,16 @@ print(list(range(8, -9, -2)))
 # the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
 
 print([2**x for x in range(9)])
+
+
+# R-1.12 Python’s random module includes a function choice(data) that returns a
+# random element from a non-empty sequence. The random module in-
+# cludes a more basic function randrange, with parameterization similar to
+# the built-in range function, that return a random choice from the given
+# range. Using only the randrange function, implement your own version
+# of the choice function.
+from random import randrange
+
+def my_choice(data):
+    index = randrange(len(data))
+    return data[index]
