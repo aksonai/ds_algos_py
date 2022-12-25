@@ -77,26 +77,26 @@ def sum_square_odd2(n: int) -> int:
 s = 'abcdefghijkl'
 k=-3
 n=len(s)
-print(s[k])
-print(s[k+n])
+# print(s[k])
+# print(s[k+n])
 
 
 # R-1.9 What parameters should be sent to the range constructor, to produce a
 # range with values 50, 60, 70, 80?
 
-print(list(range(50, 81, 10)))
+# print(list(range(50, 81, 10)))
 
 
 # R-1.10 What parameters should be sent to the range constructor, to produce a
 # range with values 8, 6, 4, 2, 0, −2, −4, −6, −8?
 
-print(list(range(8, -9, -2)))
+# print(list(range(8, -9, -2)))
 
 
 # R-1.11 Demonstrate how to use Python’s list comprehension syntax to produce
 # the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
 
-print([2**x for x in range(9)])
+# print([2**x for x in range(9)])
 
 
 # R-1.12 Python’s random module includes a function choice(data) that returns a
