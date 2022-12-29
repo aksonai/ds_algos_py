@@ -28,3 +28,19 @@ print([x**2 - x for x in range(1,11)])
 # characters literally.
 
 print([chr(x) for x in range(97,123)])
+
+
+# C-1.20 Python’s random module includes a function shuﬄe(data) that accepts a
+# list of elements and randomly reorders the elements so that each possi-
+# ble order occurs with equal probability. The random module includes a
+# more basic function randint(a, b) that returns a uniformly random integer
+# from a to b (including both endpoints). Using only the randint function,
+# implement your own version of the shuﬄe function.
+from random import randint
+
+def my_shuffle(data: List) -> List:
+    n = len(data)
+    for i in range(n):
+        j = randint(i, n-1)
+        data[i], data[j] = data[j], data[i]
+    return data
