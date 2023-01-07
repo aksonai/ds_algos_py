@@ -23,3 +23,14 @@ def write_to_list(A: List, index: int, value) -> List:
     except IndexError:
         print("Don't try buffer overflow attacks in Python!")
     return A
+
+
+# C-1.24 Write a short Python function that counts the number of vowels in a given
+# character string.
+
+def count_vowels(s: str) -> int:
+    counter = 0
+    for ch in s:
+        if ch in 'aeiou':
+            counter += 1
+    return counter
