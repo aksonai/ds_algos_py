@@ -1,8 +1,10 @@
+from pickle import MARK
 from typing import List
 
 # C-1.22 Write a short Python program that takes two arrays a and b of length n
 # storing int values, and returns the dot product of a and b. That is, it returns
 # an array c of length n such that c[i] = a[i] · b[i], for i = 0, . . . , n − 1.
+
 
 def dot_product(a: List[int], b: List[int]) -> List[int]:
     c = []
@@ -34,3 +36,19 @@ def count_vowels(s: str) -> int:
         if ch in 'aeiou':
             counter += 1
     return counter
+
+
+# C-1.25 Write a short Python function that takes a string s, representing a sentence,
+# and returns a copy of the string with all punctuation removed. For exam-
+# ple, if given the string "Let s try, Mike.", this function would return
+# "Lets try Mike".
+
+
+def remove_punctuation(s: str) -> str:
+    MARKS = ['.', ',', '?', '!', ';', ':', '(', ')', '[', ']', '{', '}', '"', '\'',
+         '...', '-', '~']
+    new_str = ''
+    for ch in s:
+        if ch not in MARKS:
+            new_str += ch
+    return new_str
